@@ -1,252 +1,98 @@
-/* Estilos Generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    background: url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #333;
 }
 
-h1, h2, h3 {
-    color: #2c3e50;
+header {
+    background: rgba(0, 119, 204, 0.9);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 95, 163, 0.9);
     margin: 0;
 }
 
-a {
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #3498db;
-}
-
-a:hover {
-    color: #f39c12;
-    text-decoration: underline;
-}
-
-/* Cabecera */
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-header nav ul li a {
     font-size: 18px;
-    color: white;
+    padding: 10px;
+    transition: background 0.3s;
 }
 
-header nav ul li a:hover {
-    color: #f39c12;
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
 }
 
-/* Sección Principal */
-main {
-    padding: 20px;
-}
-
-#bienvenida {
+section {
+    padding: 40px;
     text-align: center;
-    margin-bottom: 40px;
-}
-
-#bienvenida h2 {
-    font-size: 2rem;
-    color: #2c3e50;
-}
-
-#bienvenida p {
-    font-size: 1rem;
-    color: #555;
-}
-
-#objetivos {
-    margin-bottom: 40px;
-}
-
-#objetivos ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1.1rem;
-}
-
-#objetivos ul li {
-    margin: 10px 0;
-}
-
-#catalogo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 20px;
+    border-radius: 10px;
 }
 
 .juego {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    padding: 15px;
-    transition: transform 0.3s ease;
-}
-
-.juego:hover {
-    transform: scale(1.05);
+    display: inline-block;
+    margin: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
 }
 
 .juego img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    max-width: 100%;
+    border-radius: 10px;
 }
 
-.juego h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.juego p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.juego a {
+.boton {
     display: inline-block;
-    background-color: #3498db;
+    background: #0077cc;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
 
-.juego a:hover {
-    background-color: #2980b9;
+.boton:hover {
+    background: #005fa3;
 }
 
-/* Estilos para el Formulario de Contacto */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    color: #333;
-}
-
-form input[type="submit"] {
-    background-color: #3498db;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-}
-
-form input[type="submit"]:hover {
-    background-color: #2980b9;
-}
-
-/* Botones */
-.btn-principal {
-    display: inline-block;
-    background-color: #3498db;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-.btn-principal:hover {
-    background-color: #2980b9;
-}
-
-.btn-enviar {
-    display: inline-block;
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease;
-}
-
-.btn-enviar:hover {
-    background-color: #2980b9;
-}
-
-/* Pie de Página */
 footer {
-    background-color: #2c3e50;
+    background: #333;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-/* Estilos Responsivos */
-@media (max-width: 768px) {
-    #bienvenida h2 {
-        font-size: 1.8rem;
-    }
 
-    #catalogo {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .juego {
-        width: 90%;
-    }
-
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    header nav ul li a {
-        font-size: 16px;
-    }
-
-    form {
-        width: 90%;
-    }
-}
 
 
 
