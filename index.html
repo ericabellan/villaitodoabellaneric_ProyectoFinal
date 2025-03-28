@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Gaming</title>
+    <title>Web Gaming - Tu Portal de Juegos</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -20,10 +19,11 @@
             </ul>
         </nav>
         <div class="user-options">
-            <button onclick="login()">Iniciar Sesión</button>
-            <select onchange="cambiarIdioma(this.value)">
+            <button>Iniciar Sesión</button>
+            <select>
                 <option value="es">Español</option>
                 <option value="en">English</option>
+                <option value="ca">Català</option>
             </select>
         </div>
     </header>
@@ -31,20 +31,28 @@
     <section id="noticias" class="fade-in">
         <h2>Últimas Noticias de Videojuegos</h2>
         <div class="noticia">
-            <h3>Nuevo Lanzamiento: "The Last of Us 3"</h3>
-            <p>La famosa saga de acción y aventuras de Naughty Dog ha anunciado el lanzamiento de su tercera entrega. Los fanáticos ya pueden esperar nuevas mecánicas de juego y una historia emocionante que promete dar mucho de qué hablar en 2025.</p>
-            <a href="#">Leer más...</a>
+            <h3>Nueva Aventura: "The Last of Us 3"</h3>
+            <p>¡Grandes noticias para los fanáticos! La aclamada saga de Naughty Dog está por lanzar su tercera entrega. Prepárense para nuevas mecánicas de juego y una historia que promete ser apasionante en 2025.</p>
+            <a href="#">Descubre más...</a>
         </div>
     </section>
 
     <section id="ranking" class="fade-in">
-        <h2>Ranking de Juegos Más Jugados en 2025</h2>
-        <ol>
-            <li>
-                <h3>Assassin's Creed Shadows</h3>
-                <p>Este título ha alcanzado un récord impresionante al ser la entrega más jugada de la saga en Steam, con un pico de 64,825 jugadores simultáneos. Ambientado en el Japón feudal, ofrece una experiencia inmersiva con samuráis y ninjas.</p>
-            </li>
-        </ol>
+        <h2>Ranking de Juegos</h2>
+        <div class="container">
+            <ol class="ranking-list">
+                <li>Fortnite - El rey del Battle Royale, siempre en evolución con constantes actualizaciones y eventos en vivo.</li>
+                <li>Minecraft - Un clásico atemporal que sigue cautivando a millones con su creatividad y exploración.</li>
+                <li>League of Legends - Dominando el mundo de los MOBA con una comunidad apasionada y competitiva.</li>
+                <li>Counter-Strike 2 - Este clásico shooter ha vuelto a brillar con su renovación.</li>
+                <li>Call of Duty: Warzone - Mantiene su popularidad gracias a actualizaciones constantes y un gran número de jugadores.</li>
+                <li>GTA V (GTA Online) - Su modo online sigue atrayendo a millones con eventos y misiones personalizadas.</li>
+                <li>Valorant - Un shooter táctico que no deja de ganar adeptos.</li>
+                <li>Roblox - Un universo lleno de posibilidades que encanta a jugadores de todas las edades.</li>
+                <li>EA Sports FC 24 - El rey del fútbol virtual, anteriormente conocido como FIFA.</li>
+                <li>Elden Ring - Un RPG de acción que ha revolucionado el género y sigue siendo muy popular.</li>
+            </ol>
+        </div>
     </section>
 
     <section id="catalogo" class="fade-in">
@@ -54,10 +62,10 @@
             <div class="juego">
                 <h3>Juego 1</h3>
                 <p>Descripción breve del juego 1.</p>
-                <p><strong>Precio:</strong> $29.99</p>
+                <p><strong>Precio:</strong> $FREE</p>
                 <p><strong>Estado:</strong> Disponible</p>
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/XXXXX" title="Trailer Juego 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <button onclick="comprarJuego('https://ejemplo.com/juego1')">Comprar</button>
+                <a href="https://scratch.mit.edu/projects/1145401890" class="button">¡Quiero Comprar!</a>
             </div>
             <!-- Juego 2 -->
             <div class="juego">
@@ -66,7 +74,7 @@
                 <p><strong>Precio:</strong> $39.99</p>
                 <p><strong>Estado:</strong> Disponible</p>
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/XXXXX" title="Trailer Juego 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <button onclick="comprarJuego('https://ejemplo.com/juego2')">Comprar</button>
+                <a href="https://ejemplo.com/juego2" class="button">¡Quiero Comprar!</a>
             </div>
             <!-- Juego 3 -->
             <div class="juego">
@@ -75,7 +83,7 @@
                 <p><strong>Precio:</strong> $49.99</p>
                 <p><strong>Estado:</strong> Disponible</p>
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/XXXXX" title="Trailer Juego 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <button onclick="comprarJuego('https://ejemplo.com/juego3')">Comprar</button>
+                <a href="https://ejemplo.com/juego3" class="button">¡Quiero Comprar!</a>
             </div>
             <!-- Repite lo mismo para los 15 juegos -->
         </div>
@@ -84,40 +92,22 @@
     <section id="contacto" class="fade-in">
         <h2>Contacto</h2>
         <form id="contact-form">
-            <label for="nombre">Nombre:</label>
+            <label for="nombre">Tu Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Correo Electrónico:</label>
+            <label for="email">Tu Correo Electrónico:</label>
             <input type="email" id="email" name="email" required>
-            <label for="mensaje">Mensaje:</label>
+            <label for="mensaje">Tu Mensaje:</label>
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-            <button type="submit">Enviar</button>
+            <button type="submit">Enviar Mensaje</button>
         </form>
     </section>
-
-    <script>
-        function login() {
-            alert('Redirigiendo a la página de inicio de sesión...');
-        }
-        function cambiarIdioma(idioma) {
-            alert('Cambiando idioma a: ' + idioma);
-        }
-        function comprarJuego(url) {
-            window.location.href = url;
-        }
-
-        // Efecto de fade-in en las secciones al cargar
-        $(document).ready(function(){
-            $('.fade-in').hide().fadeIn(1500);
-        });
-
-        // Validación del formulario
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Mensaje enviado con éxito. Nos pondremos en contacto contigo pronto.");
-            document.getElementById("contact-form").reset();
-        });
-    </script>
+    
+    <footer>
+        <p>&copy; 2025 Web Gaming. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
+
+
 
 
