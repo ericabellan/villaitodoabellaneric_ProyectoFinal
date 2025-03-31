@@ -5,108 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Gaming - Tu Portal de Juegos</title>
     <link rel="stylesheet" href="style.css">
+        <!-- Encabezado -->
+        <header>
+            <img src="logo.png" alt="Logo de la web" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="tienda.html">Tienda de Ropa</a></li>
+                </ul>
+            </nav>
+            <div class="user-options">
+                <a href="#login" class="button">Iniciar Sesión</a>
+                <select>
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                    <option value="ca">Català</option>
+                </select>
+            </div>
+        </header>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo de la web" class="logo">
-        <nav>
-            <ul>
-                <li><a href="#noticias">Noticias</a></li>
-                <li><a href="#destacados">Juegos Destacados</a></li>
-                <li><a href="#ranking">Ranking</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="user-options">
-            <button>Iniciar Sesión</button>
-            <select>
-                <option value="es">Español</option>
-                <option value="en">English</option>
-                <option value="ca">Català</option>
-            </select>
-        </div>
-    </header>
-
-    <section id="noticias" class="fade-in">
-        <h2>Últimas Noticias de Videojuegos</h2>
-        <div class="noticia">
-            <h3>Nueva Aventura: "The Last of Us 3"</h3>
-            <p>¡Grandes noticias para los fanáticos! La aclamada saga de Naughty Dog está por lanzar su tercera entrega. Prepárense para nuevas mecánicas de juego y una historia que promete ser apasionante en 2025.</p>
-            <a href="#">Descubre más...</a>
-        </div>
-    </section>
-
-    <section id="ranking" class="fade-in">
-        <h2>Ranking de Juegos</h2>
-        <div class="container">
-            <ol class="ranking-list">
-                <li>Fortnite - El rey del Battle Royale, siempre en evolución con constantes actualizaciones y eventos en vivo.</li>
-                <li>Minecraft - Un clásico atemporal que sigue cautivando a millones con su creatividad y exploración.</li>
-                <li>League of Legends - Dominando el mundo de los MOBA con una comunidad apasionada y competitiva.</li>
-                <li>Counter-Strike 2 - Este clásico shooter ha vuelto a brillar con su renovación.</li>
-                <li>Call of Duty: Warzone - Mantiene su popularidad gracias a actualizaciones constantes y un gran número de jugadores.</li>
-                <li>GTA V (GTA Online) - Su modo online sigue atrayendo a millones con eventos y misiones personalizadas.</li>
-                <li>Valorant - Un shooter táctico que no deja de ganar adeptos.</li>
-                <li>Roblox - Un universo lleno de posibilidades que encanta a jugadores de todas las edades.</li>
-                <li>EA Sports FC 24 - El rey del fútbol virtual, anteriormente conocido como FIFA.</li>
-                <li>Elden Ring - Un RPG de acción que ha revolucionado el género y sigue siendo muy popular.</li>
-            </ol>
-        </div>
-    </section>
-
-    <section id="catalogo" class="fade-in">
-        <h2>Catálogo de Juegos</h2>
-        <div class="catalogo-juegos">
-            <!-- Juego 1 -->
-            <div class="juego">
-                <h3>Juego 1</h3>
-                <p>Descripción breve del juego 1.</p>
-                <p><strong>Precio:</strong> $FREE</p>
-                <p><strong>Estado:</strong> Disponible</p>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/XXXXX" title="Trailer Juego 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="https://scratch.mit.edu/projects/1145401890" class="button">¡Quiero Comprar!</a>
-            </div>
-            <!-- Juego 2 -->
-            <div class="juego">
-                <h3>Juego 2</h3>
-                <p>Descripción breve del juego 2.</p>
-                <p><strong>Precio:</strong> $39.99</p>
-                <p><strong>Estado:</strong> Disponible</p>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/XXXXX" title="Trailer Juego 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="https://ejemplo.com/juego2" class="button">¡Quiero Comprar!</a>
-            </div>
-            <!-- Juego 3 -->
-            <div class="juego">
-                <h3>Juego 3</h3>
-                <p>Descripción breve del juego 3.</p>
-                <p><strong>Precio:</strong> $49.99</p>
-                <p><strong>Estado:</strong> Disponible</p>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/XXXXX" title="Trailer Juego 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="https://ejemplo.com/juego3" class="button">¡Quiero Comprar!</a>
-            </div>
-            <!-- Repite lo mismo para los 15 juegos -->
-        </div>
-    </section>
-
-    <section id="contacto" class="fade-in">
-        <h2>Contacto</h2>
-        <form id="contact-form">
-            <label for="nombre">Tu Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Tu Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="mensaje">Tu Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Web Gaming. Todos los derechos reservados.</p>
-    </footer>
+    <img src="banner.png" alt="Banner de mi página" class="banner">
 </body>
 </html>
+
+
 
 
 
