@@ -1,169 +1,339 @@
-/* General Styles */
+/* ============================= */
+/* 1. IMPORTACIÓN DE FUENTES     */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+/* ============================= */
+/* 2. VARIABLES GLOBALES         */
+/* ============================= */
+:root {
+  --bg-dark: #0f0f10;
+  --bg-header: #1a1a1d;
+  --bg-card: #1f1f22;
+  --accent-color: #00bcd4;
+  --text-light: #ffffff;
+  --text-muted: #aaa;
+  --border-color: #333;
+}
+
+/* ============================= */
+/* 3. RESET BÁSICO               */
+/* ============================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+/* ============================= */
+/* 4. BODY Y FUENTES             */
+/* ============================= */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1e1e1e; /* Fondo oscuro para estilo moderno */
-    color: #f4f4f4;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
 }
 
-/* Encabezado */
-header {
-    background-color: #333;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-center: 10px;
+/* ============================= */
+/* 5. CONTAINERS Y SECCIONES     */
+/* ============================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
+.section__title {
+  font-size: 2rem;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #444;
+  display: inline-block;
 }
 
+.section__description {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* ============================= */
+/* 6. HEADER Y NAVEGACIÓN        */
+/* ============================= */
+.header {
+  background-color: var(--bg-header);
+  padding: 20px 0;
+  border-bottom: 2px solid var(--border-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container,
 .logo {
-    width: 50px;
-    margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.logo__img,
+.logo {
+  width: 50px;
+  height: auto;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
+.logo__title {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
-.nav-links li a:hover, .nav-links li a.active {
-    color: #0004f7;
+header h1 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
 }
 
-/* Sección General */
-section {
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #292929;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 1200px;
-    align-items: center;
+.nav,
+.nav__list {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
-/* Botones */
+.nav__link,
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav__link:hover,
+.nav-links a:hover,
+.nav__link--active,
+.nav-links .active {
+  color: var(--text-light);
+  background-color: #292929;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* ============================= */
+/* 7. BANNER                     */
+/* ============================= */
+.banner {
+  width: 100%;
+  max-height: 450px;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom: 4px solid var(--accent-color);
+}
+
+/* ============================= */
+/* 8. CARDS Y FEATURES           */
+/* ============================= */
+.catalogo__grid,
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.juego-card,
+.feature-item {
+  background-color: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.juego-card:hover,
+.feature-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.juego-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,255,255,0.05), rgba(0,255,255,0.1));
+  transform: skewY(-15deg);
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.juego-card:hover::before {
+  top: 100%;
+}
+
+.juego-card__img,
+.feature-item img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.juego-card:hover .juego-card__img {
+  transform: scale(1.03);
+}
+
+.juego-card__title,
+.feature-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  z-index: 1;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ============================= */
+/* 9. FORMULARIOS                */
+/* ============================= */
+.form {
+  background-color: var(--bg-header);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+.form__group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__label {
+  margin-bottom: 8px;
+  color: #ccc;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.form__input,
+.form__textarea,
+input,
+textarea,
+select {
+  padding: 12px 15px;
+  background-color: #0f0f10;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  width: 100%;
+}
+
+.form__input:focus,
+.form__textarea:focus,
+input:focus,
+textarea:focus {
+  border-color: #0ff;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+/* ============================= */
+/* 10. BOTONES                   */
+/* ============================= */
 .button {
-    padding: 10px 20px;
-    background-color: #068fff;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s;
-    cursor: pointer;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
 }
 
 .button:hover {
-    background-color: #fff;
+  background-color: #0cf;
+  transform: scale(1.05);
 }
 
-/* Imágenes */
-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+/* ============================= */
+/* 11. FOOTER                    */
+/* ============================= */
+.footer {
+  background-color: #111;
+  padding: 30px 20px;
+  text-align: center;
+  border-top: 2px solid #222;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Footer */
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    border-top: 3px solid #00ff7f;
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+.footer__copy {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.footer__link,
 footer a {
-    color: #00ff7f;
-    text-decoration: none;
+  color: #09f;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+.footer__link:hover,
 footer a:hover {
-    text-decoration: underline;
+  color: #0cf;
+  text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    section {
-        padding: 10px;
-    }
-
-    .button {
-        width: 100%;
-        text-align: center;
-    }
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
 }
 
-#catalogo {
-    text-align: center;
-    padding: 30px;
-    font-size: 2%; 
+.social-links img {
+  width: 24px;
+  transition: transform 0.3s ease;
 }
 
-.catalogo-juegos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+.social-links img:hover {
+  transform: scale(1.2);
 }
 
-.juego {
-    position: relative;
-    width: 200px;
-    text-align: center;
-    cursor: pointer;
-}
 
-.juego img {
-    width: 100%;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.juego:hover img {
-    transform: scale(1.1);
-    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.3);
-}
-
-.juego h3 {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
 
 
 

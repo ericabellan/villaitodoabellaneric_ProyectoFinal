@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Web Gaming - Tu portal para encontrar juegos, noticias, y productos exclusivos para gamers.">
+    <meta name="keywords" content="juegos, noticias, catálogo, tienda, videojuegos, eSports">
+    <meta name="author" content="Eric Abellan">
     <title>Web Gaming - Tu Portal de Juegos</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <!-- Encabezado -->
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Logo de la web" class="logo">
+            <img src="img/logo.png" alt="Logo de Web Gaming" class="logo">
             <h1>Web Gaming</h1>
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="inicio.html" class="active">Inicio</a></li>
                 <li><a href="noticias.html">Noticias</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -23,8 +29,8 @@
             </ul>
             <div class="user-options">
                 <a href="#login" class="button">Iniciar Sesión</a>
-                <select class="language-select">
-                    <option value="es">Español</option>
+                <select class="language-select" aria-label="Seleccionar idioma">
+                    <option value="es" selected>Español</option>
                     <option value="en">English</option>
                     <option value="ca">Català</option>
                 </select>
@@ -34,15 +40,58 @@
 
     <!-- Banner -->
     <section class="banner">
-        <img src="img/banner.png" alt="Banner" class="banner-image">
+        <img src="img/banner.png" alt="Banner promocional de Web Gaming" class="banner-image">
     </section>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section class="intro">
+            <h2>Bienvenido a Web Gaming</h2>
+            <p>La mejor web para los amantes de los videojuegos. ¡Descubre noticias, catálogos y productos exclusivos para ti!</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-item">
+                <img src="img/noticias.png" alt="Icono de noticias">
+                <h3>Noticias</h3>
+                <p>Entérate de las últimas noticias del mundo de los videojuegos y eSports.</p>
+            </div>
+
+            <section class="features">
+                <div class="feature-item">
+                    <img src="img/contacto.png" alt="Icono de contacto">
+                    <h3>Contacto/h3>
+                    <p>Cualquier duda del mundo de los videojuegos y eSports escríbenos para una solución.</p>
+                </div>
+            <div class="feature-item">
+                <img src="img/catalogo.png" alt="Icono de catálogo">
+                <h3>Catálogo</h3>
+                <p>Explora nuestro catálogo con los mejores juegos disponibles para todas las plataformas.</p>
+            </div>
+            <div class="feature-item">
+                <img src="img/tienda.png" alt="Icono de tienda">
+                <h3>Tienda</h3>
+                <p>Compra merchandising exclusivo y productos gamer en nuestra tienda online.</p>
+            </div>
+        </section>
+    </main>
+
     <!-- Footer -->
     <footer>
-        <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
-        <p>&copy; 2025 FP LLEFIÀ--Eric Abellan.</p>
+        <div class="footer-content">
+            <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
+            <p>&copy; 2025 FP LLEFIÀ - Eric Abellan. Todos los derechos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#" aria-label="Facebook"><img src="img/facebook.png" alt="Facebook"></a></li>
+                <li><a href="#" aria-label="Twitter"><img src="img/twitter.png" alt="Twitter"></a></li>
+                <li><a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
+
 </html>
+
 
 
 
