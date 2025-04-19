@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Ropa - Web Gaming</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda de Ropa - Web Gaming</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <div class="logo-container">
-            <img src="img/logo.png" alt="Logo de Web Gaming" class="logo">
-            <h1>Web Gaming</h1>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo de Web Gaming" class="logo" />
+      <h1>Web Gaming</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="tienda.html" class="active">Tienda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Tienda -->
+  <main>
+    <section id="tienda">
+      <h2>Tienda eSports</h2>
+      <p class="intro">Descubre nuestra colección de ropa gamer exclusiva. ¡Exprésate con estilo!</p>
+
+      <div class="tienda-grid">
+        <!-- Producto 1 -->
+        <div class="producto-card">
+          <img src="img/camiseta1.png" alt="Camiseta Fortnite" class="producto-img"/>
+          <h3 class="producto-titulo">Camiseta Fortnite</h3>
+          <p class="producto-precio">24,99€</p>
+          <button class="btn-comprar">Añadir al carrito</button>
         </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="inicio.html">Inicio</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="tienda.html" class="active">Tienda de Ropa</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Sección Tienda ropa -->
-    <main>
-        <section id="tienda">
-            <h2>Ropa eSports</h2>
-            <div class="catalogo-juegos">
-                <div class="juego-card">
-                    <img src="img/camiseta1.png" alt="Camiseta Fortnite" class="juego-card__img">
-                    <h3 class="juego-card__title">Camiseta Fortnite</h3>
-                    <button class="button add-to-cart">Añadir al carrito</button>
-                </div>
-                <div class="juego-card">
-                    <img src="img/camiseta2.jpg" alt="Camiseta LEGO Fortnite" class="juego-card__img">
-                    <h3 class="juego-card__title">Camiseta LEGO Fortnite</h3>
-                    <button class="button add-to-cart">Añadir al carrito</button>
-                </div>
-                <div class="juego-card">
-                    <img src="img/camiseta3.jpg" alt="Camiseta Rocket League" class="juego-card__img">
-                    <h3 class="juego-card__title">Camiseta Rocket League</h3>
-                    <button class="button add-to-cart">Añadir al carrito</button>
-                </div>
-                <div class="juego-card">
-                    <img src="img/camiseta4.jpg" alt="Camiseta Fall Guys" class="juego-card__img">
-                    <h3 class="juego-card__title">Camiseta Fall Guys</h3>
-                    <button class="button add-to-cart">Añadir al carrito</button>
-                </div>
-                <div class="juego-card">
-                    <img src="img/camiseta5.jpg" alt="Camiseta Fortnite Festival" class="juego-card__img">
-                    <h3 class="juego-card__title">Camiseta Fortnite Festival</h3>
-                    <button class="button add-to-cart">Añadir al carrito</button>
-                </div>
-                <div class="juego-card">
-                    <img src="img/camiseta6.jpg" alt="Camiseta Rocket Racing" class="juego-card__img">
-                    <h3 class="juego-card__title">Camiseta Rocket Racing</h3>
-                    <button class="button add-to-cart">Añadir al carrito</button>
-                </div>
-            </div>
-        </section>
-    </main>
+        <!-- Producto 2 -->
+        <div class="producto-card">
+          <img src="img/camiseta2.jpg" alt="Sudadera Rocket League" class="producto-img"/>
+          <h3 class="producto-titulo">Sudadera Rocket League</h3>
+          <p class="producto-precio">39,99€</p>
+          <button class="btn-comprar">Añadir al carrito</button>
+        </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
-        <p>&copy; 2025 FP LLEFIÀ - Eric Abellan. Todos los derechos reservados.</p>
-    </footer>
+        <!-- Producto 3 -->
+        <div class="producto-card">
+          <img src="img/camiseta3.jpg" alt="Camiseta Fall Guys" class="producto-img"/>
+          <h3 class="producto-titulo">Camiseta Fall Guys</h3>
+          <p class="producto-precio">22,50€</p>
+          <button class="btn-comprar">Añadir al carrito</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="producto-card">
+          <img src="img/camiseta4.jpg" alt="Gorra eSports" class="producto-img"/>
+          <h3 class="producto-titulo">Gorra Gamer</h3>
+          <p class="producto-precio">14,95€</p>
+          <button class="btn-comprar">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
+    <p>&copy; 2025 FP LLEFIÀ — Eric Abellan.</p>
+  </footer>
 </body>
 </html>
+
 
 

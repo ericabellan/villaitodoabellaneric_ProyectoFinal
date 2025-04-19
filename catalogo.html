@@ -1,68 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo | Web Gaming</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Juegos - Web Gaming</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container header__container">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo de Web Gaming" class="logo__img">
-                <h1 class="logo__title">Web Gaming</h1>
-            </div>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a href="inicio.html" class="nav__link">Inicio</a></li>
-                    <li><a href="noticias.html" class="nav__link">Noticias</a></li>
-                    <li><a href="catalogo.html" class="nav__link nav__link--active">Catálogo</a></li>
-                    <li><a href="contacto.html" class="nav__link">Contacto</a></li>
-                    <li><a href="tienda.html" class="nav__link">Tienda</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo de Web Gaming" class="logo" />
+      <h1>Web Gaming</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="catalogo.html" class="active">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main class="main">
-        <section class="catalogo section">
-            <div class="container">
-                <h2 class="section__title">Catálogo de Juegos</h2>
-                <div class="catalogo__grid">
-                    <article class="juego-card">
-                        <img src="img/fortnite.jpg" alt="Fortnite" class="juego-card__img">
-                        <h3 class="juego-card__title">Fortnite</h3>
-                    </article>
-                    <article class="juego-card">
-                        <img src="img/lego-fortnite.jpg" alt="LEGO Fortnite" class="juego-card__img">
-                        <h3 class="juego-card__title">LEGO Fortnite</h3>
-                    </article>
-                    <article class="juego-card">
-                        <img src="img/rocket-league.jpg" alt="Rocket League" class="juego-card__img">
-                        <h3 class="juego-card__title">Rocket League</h3>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
+  <!-- Catálogo -->
+  <main>
+    <section id="catalogo">
+      <h2>Catálogo de Juegos</h2>
+      <p class="intro">Explora los títulos disponibles en nuestra plataforma. Algunos juegos están enlazados para más información.</p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer__container">
-            <p class="footer__contact">
-                Contacto: <a href="mailto:kingame@gmail.com" class="footer__link">kingame@gmail.com</a>
-            </p>
-            <p class="footer__copy">&copy; 2025 FP LLEFIÀ – Eric Abellan</p>
+      <div class="catalogo-grid">
+        <!-- Fortnite -->
+        <a href="https://www.fortnite.com" target="_blank" class="juego-card">
+          <img src="https://th.bing.com/th/id/R.c677bba8f9c55265cb93b868ff3ccfd1?rik=6q2WyzlnkBLqFw&pid=ImgRaw&r=0" alt="Fortnite">
+          <div class="juego-info">
+            <h3>Fortnite</h3>
+            <span class="categoria battle">Battle Royale</span>
+          </div>
+        </a>
+
+        <!-- Rocket League -->
+        <a href="https://www.rocketleague.com" target="_blank" class="juego-card">
+          <img src="https://th.bing.com/th/id/OIP.R_2zRmK7oevpJVl46KTvTAHaEP?rs=1&pid=ImgDetMain" alt="Rocket League">
+          <div class="juego-info">
+            <h3>Rocket League</h3>
+            <span class="categoria carreras">Carreras</span>
+          </div>
+        </a>
+
+        <!-- Fall Guys -->
+        <a href="https://fallguys.com" target="_blank" class="juego-card">
+          <img src="img/fallguys.jpg" alt="Fall Guys">
+          <div class="juego-info">
+            <h3>Fall Guys</h3>
+            <span class="categoria party">Party</span>
+          </div>
+        </a>
+
+        <!-- LEGO Fortnite -->
+        <div class="juego-card">
+          <img src="img/lego_fortnite.jpg" alt="LEGO Fortnite">
+          <div class="juego-info">
+            <h3>LEGO Fortnite</h3>
+            <span class="categoria battle">Battle Royale</span>
+          </div>
         </div>
-    </footer>
+
+        <!-- Valorant -->
+        <div class="juego-card">
+          <img src="img/valorant.jpg" alt="Valorant">
+          <div class="juego-info">
+            <h3>Valorant</h3>
+            <span class="categoria shooter">Shooter</span>
+          </div>
+        </div>
+
+        <!-- Minecraft -->
+        <div class="juego-card">
+          <img src="img/minecraft.jpg" alt="Minecraft">
+          <div class="juego-info">
+            <h3>Minecraft</h3>
+            <span class="categoria sandbox">Sandbox</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
+    <p>&copy; 2025 FP LLEFIÀ — Eric Abellan.</p>
+  </footer>
 </body>
 </html>
+
 
 
 
