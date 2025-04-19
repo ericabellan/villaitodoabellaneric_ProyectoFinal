@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Encabezado -->
+    <!-- Encabezado con el logo y la navegación -->
     <header>
         <div class="logo-container">
-            <img src="img/logo.png" alt="Logo de Web Gaming" class="logo">
+            <img src="img/logo.png" alt="Logo Web Gaming" class="logo">
             <h1>Web Gaming</h1>
         </div>
         <nav>
@@ -24,32 +24,53 @@
         </nav>
     </header>
 
-    <!-- Sección de Noticias -->
+    <!-- Sección principal de noticias -->
     <main>
         <section id="noticias">
-            <h2>Últimas Noticias</h2>
+            <h2 class="section-title">Últimas Noticias</h2>
             <div class="noticias-contenido">
-                <article class="noticia">
-                    <h3>Nintendo avisa: el pack de Switch 2 con Mario Kart World no estará disponible para siempre y pone fecha límite
-                    </h3>
-                    <p>El pack que incluye Nintendo Switch 2 y Mario Kart World tiene fecha de caducidad: Nintendo avisa de que no hará más a partir de cierta fecha y se acabarán cuando se agoten existencias.
-                    </p>
-                    <img src="https://mediamaster.vandal.net/m/4-2025/17/20254171816122_1.jpg"
+                <article class="noticia fade-in">
+                    <div class="noticia-img">
+                        <img src="https://mediamaster.vandal.net/m/4-2025/17/20254171816122_1.jpg" alt="Nintendo Switch 2 con Mario Kart World">
+                    </div>
+                    <div class="noticia-texto">
+                        <h3 class="noticia-titulo">Nintendo confirma que el pack de Switch 2 con Mario Kart World tendrá fecha límite</h3>
+                        <p class="noticia-descripcion">El pack que incluye la nueva Nintendo Switch 2 y el juego Mario Kart World tendrá fecha de caducidad. Se agotará cuando se acaben las existencias, así que es mejor no dejar pasar esta oportunidad.</p>
+                        <a href="noticia-detalles.html" class="button">Leer más</a>
+                    </div>
                 </article>
-                <article class="noticia">
-                    <h3>Noticia 2</h3>
-                    <p>Descripción breve de la noticia 2...</p>
+
+                <article class="noticia fade-in">
+                    <div class="noticia-img">
+                        <img src="https://via.placeholder.com/600x350" alt="Noticia 2">
+                    </div>
+                    <div class="noticia-texto">
+                        <h3 class="noticia-titulo">¡Un nuevo DLC de Rocket League llega esta semana!</h3>
+                        <p class="noticia-descripcion">Los jugadores de Rocket League ya pueden preparar sus coches para la nueva actualización que promete traer grandes sorpresas. ¡Más vehículos y pistas para disfrutar!</p>
+                        <a href="noticia-detalles.html" class="button">Leer más</a>
+                    </div>
                 </article>
+
+                <!-- Puedes seguir añadiendo más artículos aquí -->
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- Pie de página con contacto e iconos sociales -->
     <footer>
-        <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
-        <p>&copy; 2025 FP LLEFIÀ--Eric Abellan.</p>
+        <div class="footer-content">
+            <p>Si tienes alguna pregunta, no dudes en contactarnos: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
+            <p>&copy; 2025 Web Gaming - Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="img/instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
+
 
 
