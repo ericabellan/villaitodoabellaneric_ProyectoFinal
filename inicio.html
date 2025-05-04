@@ -1,44 +1,72 @@
+<!-- Este es un ejemplo base, empezaré revisando sección por sección -->
+
+<!-- INICIO.HTML -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - Web Gaming</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - Web Gaming</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <div class="logo-container">
-            <img src="img/logo.png" alt="Logo Web Gaming" class="logo">
-            <h1>Web Gaming</h1>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="inicio.html" class="active">Inicio</a></li>
-                <li><a href="noticias.html">Noticias</a></li>
-                <li><a href="catalogo.html">Catálogo</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="tienda.html">Tienda</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Banner -->
-    <section class="banner">
-        <img src="img/banner.png" alt="Banner Web Gaming">
-    </section>
+  <header class="header">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo de Web Gaming" class="logo" />
+      <h1 class="titulo">KING GAME</h1>
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="inicio.html" class="active">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="eric.html">¿Quiénes Somos?</a></li>
+        <li><a href="torneos.html">torneos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
-        <p>&copy; 2025 FP LLEFIÀ - Eric Abellan</p>
-        <div class="social-links">
-            <a href="#" aria-label="Facebook"><img src="img/facebook.png" alt="Facebook"></a>
-            <a href="#" aria-label="Twitter"><img src="img/twitter.png" alt="Twitter"></a>
-            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+  <section class="banner">
+    <div class="banner-texto">
+      <h2>Bienvenido a King Game</h2>
+      <p>Tu mundo gamer lo tienes en tu pantalla</p>
+    </div>
+  </section>
+
+  <main class="contenedor">
+    <section class="destacados">
+      <h2>Descubre lo Mejor</h2>
+      <div class="destacados-grid">
+        <div class="destacado-item">
+          <img src="img/new.png" alt="Últimos lanzamientos">
+          <h3>Lanzamientos</h3>
+          <p>Los juegos más recientes ya están aquí.</p>
         </div>
-    </footer>
+        <div class="destacado-item">
+          <img src="img/comunidad.png" alt="Comunidad">
+          <h3>Comunidad</h3>
+          <p>Comparte tus experiencias con los otros gamers como tú.</p>
+        </div>
+        <div class="destacado-item">
+          <img src="img/eventos.png" alt="Eventos">
+          <h3>Eventos</h3>
+          <p>No te pierdas los torneos que pueden haber de videojuegos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
+    <p>&copy; 2025 FP LLEFIÀ — Eric Abellan.</p>
+  </footer>
 </body>
 </html>
+
+
+
+
 
 
