@@ -3,41 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formulario de Registro</title>
+  <title>Formulario de Registro | Web Gaming</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Formulario de Registro</h1>
+
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo Web Gaming" class="logo-small" />
+      <h1 class="titulo">Registro - Web Gaming</h1>
+    </div>
   </header>
 
-  <main>
-    <section class="registro">
-      <h2>¡Regístrate para participar!</h2>
-      <form>
+  <main class="main-content">
+    <section class="registro container">
+      <h2>📝 ¡Regístrate para participar en torneos!</h2>
+
+      <form action="#" method="post" class="formulario-registro">
         <div class="form-group">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
         </div>
+
         <div class="form-group">
           <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
         </div>
+
         <div class="form-group">
-          <label for="juego">Juego:</label>
-          <select id="juego" name="juego">
+          <label for="juego">Juego favorito:</label>
+          <select id="juego" name="juego" required>
+            <option value="" disabled selected>Elige un juego</option>
             <option value="fortnite">Fortnite</option>
             <option value="rocket-league">Rocket League</option>
             <option value="cod">Call of Duty</option>
           </select>
         </div>
-        <button type="submit">Registrarse</button>
+
+        <button type="submit" class="btn">Registrarse</button>
       </form>
     </section>
   </main>
 
-  <footer>
-    <p>¿Ya tienes cuenta? <a href="login.html">Iniciar sesión</a></p>
+  <footer class="footer">
+    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+    <p>&copy; 2025 Web Gaming — Eric Abellan</p>
   </footer>
+
 </body>
 </html>
+

@@ -1,3 +1,4 @@
+/* Reseteo de márgenes y paddings */
 * {
   margin: 0;
   padding: 0;
@@ -6,27 +7,28 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0e0e0e;
-  color: #f0f0f0;
+  background-color: #0e0e0e; /* Fondo oscuro */
+  color: #f0f0f0; /* Color de texto suave */
   line-height: 1.6;
+  padding: 0 15px; /* Espaciado para mejor lectura */
 }
 
 a {
   text-decoration: none;
-  color: #f0f0f0;
-  transition: color 0.3s;
+  color: inherit; /* Color de texto hereda el color del elemento */
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #f39c12;
+  color: #f39c12; /* Amarillo cálido para hover */
 }
 
 img {
   max-width: 100%;
-  display: block;
+  display: block; /* Asegurarse de que no haya margen abajo de las imágenes */
 }
 
-/* Header */
+/* Barra de navegación */
 .navbar {
   background-color: #1a1a1a;
   padding: 1rem 2rem;
@@ -42,12 +44,13 @@ img {
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
 .logo {
   height: 40px;
   width: 40px;
+  border-radius: 50%;
 }
 
 .nav-links {
@@ -58,7 +61,7 @@ img {
 
 .nav-links li a {
   font-weight: 600;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
 }
 
@@ -81,54 +84,56 @@ img {
 
 .banner h2 {
   font-size: 3rem;
+  text-align: center;
 }
 
-/* Main */
+/* Sección principal */
 main {
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 .intro {
+  font-size: 1.2rem;
+  text-align: center;
   margin-bottom: 2rem;
+}
+
+.intro p {
   font-size: 1.1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 /* Botón */
 .btn {
   background-color: #ff6600;
-  color: #fff;
+  color: white;
   padding: 12px 24px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
-  transition: background-color 0.3s;
+  transition: 0.3s background-color ease, 0.3s transform ease;
 }
 
 .btn:hover {
   background-color: #e65500;
+  transform: translateY(-3px);
 }
 
-/* Catálogo */
+/* Catálogo de juegos */
 .catalogo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .juego-card {
   background-color: #1e1e1e;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: flex;
-  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .juego-card:hover {
@@ -158,6 +163,7 @@ main {
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   display: inline-block;
+  margin-top: 5px;
 }
 
 .boton-aleatorio-container {
@@ -179,26 +185,13 @@ main {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(255, 166, 0, 0.3);
 }
+
 /* Torneos */
-main {
-  padding: 2rem;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.intro {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 .torneos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .torneo-card {
@@ -206,7 +199,7 @@ main {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .torneo-card:hover {
@@ -250,38 +243,37 @@ main {
 .btn {
   display: inline-block;
   background-color: #ff6600;
-  color: #fff;
+  color: white;
   padding: 10px 20px;
   border-radius: 6px;
   text-align: center;
   margin-top: 1rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .btn:hover {
   background-color: #e65500;
+  transform: translateY(-3px);
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-  .torneos-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 /* Footer */
 footer {
   background-color: #1a1a1a;
   color: #ccc;
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 0;
   margin-top: 40px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  border-top: 1px solid #444;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .nav-links {
     flex-direction: column;
     gap: 10px;
@@ -291,7 +283,12 @@ footer {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .torneos-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
 
   
   

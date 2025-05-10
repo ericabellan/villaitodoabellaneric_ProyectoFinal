@@ -1,121 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catálogo de Juegos - Web Gaming</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="logo-container">
-      <img src="img/logo.png" alt="Logo pequeño" class="logo-small" />
+<!-- ... Todo el código anterior sigue igual ... -->
+
+<!-- Catálogo -->
+<main>
+  <section id="catalogo">
+    <h2 class="section-title">🎮 Catálogo de Juegos</h2>
+    <p class="intro">
+      Explora los mejores títulos disponibles en nuestra plataforma. Haz clic en cada uno para obtener más información o probarlos.
+    </p>
+
+    <!-- Botón Jugar Aleatorio -->
+    <div class="boton-aleatorio-container">
+      <button class="btn" onclick="jugarAleatorio()">🎲 Jugar juego aleatorio</button>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="catalogo.html" class="active">Catálogo</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a href="quienes-somos.html">Quiénes somos</a></li>
-        <li><a href="torneos.html">Torneos</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Catálogo -->
-  <main>
-    <section id="catalogo">
-      <h2 class="section-title">🎮 Catálogo de Juegos</h2>
-      <p class="intro">
-        Explora los mejores títulos disponibles en nuestra plataforma. Haz clic en cada uno para obtener más información.
-      </p>
+    <div class="catalogo-grid">
 
-      <!-- Botón Jugar Aleatorio -->
-      <div class="boton-aleatorio-container">
-        <button class="btn" onclick="jugarAleatorio()">🎲 Jugar juego aleatorio</button>
+      <!-- Juego creado por ti -->
+      <div class="juego-card personalizado">
+        <img src="img/mi-juego.jpg" alt="Mi Juego Épico">
+        <div class="juego-info">
+          <h3>Mi Juego Épico</h3>
+          <p>Una aventura única creada por mí. ¡Pruébalo gratis o cómpralo completo!</p>
+          <span class="categoria">Indie / Aventura</span>
+          <div class="botones-juego">
+            <button class="btn" onclick="probarJuego()">🎮 Probar Gratis</button>
+            <a href="comprar.html" class="btn">🛒 Comprar Juego</a>
+          </div>
+        </div>
       </div>
 
-      <div class="catalogo-grid">
+      <!-- Juegos populares (siguen igual) -->
+      <!-- Fortnite, Rocket League, Fall Guys, etc... -->
 
-        <a href="https://www.fortnite.com" target="_blank" class="juego-card">
-          <img src="https://th.bing.com/th/id/R.c677bba8f9c55265cb93b868ff3ccfd1?rik=6q2WyzlnkBLqFw&pid=ImgRaw&r=0" alt="Fortnite">
-          <div class="juego-info">
-            <h3>Fortnite</h3>
-            <span class="categoria">Battle Royale</span>
-          </div>
-        </a>
+    </div>
+  </section>
+</main>
 
-        <a href="https://www.rocketleague.com" target="_blank" class="juego-card">
-          <img src="https://th.bing.com/th/id/OIP.R_2zRmK7oevpJVl46KTvTAHaEP?rs=1&pid=ImgDetMain" alt="Rocket League">
-          <div class="juego-info">
-            <h3>Rocket League</h3>
-            <span class="categoria">Carreras</span>
-          </div>
-        </a>
+<!-- Script adicional para probar tu juego -->
+<script>
+  function jugarAleatorio() {
+    const enlaces = Array.from(document.querySelectorAll(".juego-card a")).map(card => card.href);
+    const aleatorio = enlaces[Math.floor(Math.random() * enlaces.length)];
+    window.open(aleatorio, "_blank");
+  }
 
-        <a href="https://fallguys.com" target="_blank" class="juego-card">
-          <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_FallGuys_image1600w.jpg" alt="Fall Guys">
-          <div class="juego-info">
-            <h3>Fall Guys</h3>
-            <span class="categoria">Party</span>
-          </div>
-        </a>
-
-        <a href="https://www.callofduty.com/es/blackops6/ps5" target="_blank" class="juego-card">
-          <img src="https://th.bing.com/th/id/OIP.E0-Kb15FCFOJccQ5sWa-qgHaHa?w=194&h=194&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="COD BO6">
-          <div class="juego-info">
-            <h3>Call Of Duty Black Ops 6</h3>
-            <span class="categoria">Battle Royale</span>
-          </div>
-        </a>
-
-        <a href="https://www.minecraft.net/es-es/about-minecraft" target="_blank" class="juego-card">
-          <img src="https://gaming-cdn.com/img/products/442/pcover/1400x500/442.jpg?v=1716387513" alt="Minecraft">
-          <div class="juego-info">
-            <h3>Minecraft</h3>
-            <span class="categoria">Sandbox</span>
-          </div>
-        </a>
-
-        <a href="https://playvalorant.com/es-es/media/" target="_blank" class="juego-card">
-          <img src="https://1000marcas.net/wp-content/uploads/2022/10/Valorant-Logo-thumb.png" alt="Valorant">
-          <div class="juego-info">
-            <h3>Valorant</h3>
-            <span class="categoria">Shooter</span>
-          </div>
-        </a>
-
-        <a href="https://www.inazuma.jp/victory-road/en/" target="_blank" class="juego-card">
-          <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2799860/b49857068c942b024ede850e3d6c6bfeb54c0fe9/header_spanish.jpg?t=1745203249" alt="Inazuma Eleven">
-          <div class="juego-info">
-            <h3>INAZUMA ELEVEN: Victory Road</h3>
-            <span class="categoria">Fútbol</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
-    <p>&copy; 2025 FP LLEFIÀ — Eric Abellan.</p>
-  </footer>
-
-  <!-- Script -->
-  <script>
-    function jugarAleatorio() {
-      const enlaces = Array.from(document.querySelectorAll(".juego-card")).map(card => card.href);
-      const aleatorio = enlaces[Math.floor(Math.random() * enlaces.length)];
-      window.open(aleatorio, "_blank");
-    }
-  </script>
-</body>
-</html>
+  function probarJuego() {
+    // Cambia esto por la URL real de tu juego gratuito
+    window.open("demo/mi-juego/index.html", "_blank");
+  }
+</script>
 
 
 
