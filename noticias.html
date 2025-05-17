@@ -2,22 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Noticias frescas sobre videojuegos, torneos y lanzamientos en Web Gaming." />
   <title>Noticias | Web Gaming</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
+  <!-- Barra de Navegación -->
+  <header class="navbar" role="banner">
     <div class="container">
-      <img src="img/logo.png" alt="Logo pequeño" class="logo-small" />
-      <nav>
+      <a href="inicio.html" aria-label="Inicio Web Gaming">
+        <img src="img/logo.png" alt="Logo pequeño Web Gaming" class="logo-small" />
+      </a>
+      <nav role="navigation" aria-label="Menú principal">
         <ul class="nav-links">
           <li><a href="inicio.html">Inicio</a></li>
-          <li><a href="noticias.html" class="active">Noticias</a></li>
+          <li><a href="noticias.html" class="active" aria-current="page">Noticias</a></li>
           <li><a href="catalogo.html">Catálogo</a></li>
           <li><a href="contacto.html">Contacto</a></li>
           <li><a href="eric.html">Quiénes Somos</a></li>
@@ -27,56 +28,48 @@
     </div>
   </header>
 
-  <!-- SECCIÓN DE NOTICIAS -->
-  <main class="main-content">
-    <section class="noticias-section container">
+  <!-- Sección Principal -->
+  <main class="main-content" role="main">
+    <section class="noticias-section container" aria-label="Últimas noticias de videojuegos">
       <h1 class="section-title">📰 Últimas Noticias</h1>
 
-      <!-- NOTICIA 1 -->
-      <article class="noticia-card">
-        <div class="noticia-contenido">
-          <h2>La demo de Gothic Remake ha sido actualizada con mejoras basadas en las opiniones de los jugadores</h2>
-          <span class="fecha-noticia">12 de mayo, 2025</span>
-          <p> Alkimia Interactive ha actualizado la demo de Gothic Remake con nuevos idiomas, incluyendo el español, ajustes en el movimiento del personaje y más mejoras.</p>
-          <img src="https://mediamaster.vandal.net/m/80/80366/gothic-remake-202521010434226_1.jpg" alt="Gothic Remake">
-        </div>
+      <!-- Noticia 1 -->
+      <article class="noticia-card" tabindex="0">
+        <h2>La demo de Gothic Remake ha sido actualizada con mejoras basadas en las opiniones de los jugadores</h2>
+        <time datetime="2025-05-12" class="fecha-noticia">12 de mayo, 2025</time>
+        <p>Alkimia Interactive ha actualizado la demo de Gothic Remake con nuevos idiomas, incluyendo el español, ajustes en el movimiento del personaje y más mejoras.</p>
+        <img src="https://mediamaster.vandal.net/m/80/80366/gothic-remake-202521010434226_1.jpg" alt="Captura del juego Gothic Remake" loading="lazy" />
       </article>
 
-      <!-- NOTICIA 2 -->
-      <article class="noticia-card">
-        <div class="noticia-contenido">
-          <h2>Guía Elden Ring: Shadow of the Erdtree - Trucos, consejos y secretos</h2>
-          <span class="fecha-noticia">10 de mayo, 2025</span>
-          <p>Esto es todo lo que necesitas saber para completar al 100% el DLC de Elden Ring: Shadow of the Erdtree. Guías de todas las regiones, jefes, ubicación de armas y armaduras, objetos de mejora y mucho más.</p>
-          <img src="https://media.vandal.net/i/1280x720/6-2024/21/202462111372243_1.jpg.webp" alt="Elden Ring DLC">
-        </div>
+      <!-- Noticia 2 -->
+      <article class="noticia-card" tabindex="0">
+        <h2>Guía Elden Ring: Shadow of the Erdtree - Trucos, consejos y secretos</h2>
+        <time datetime="2025-05-10" class="fecha-noticia">10 de mayo, 2025</time>
+        <p>Todo lo que necesitas saber para completar al 100% el DLC de Elden Ring: Shadow of the Erdtree.</p>
+        <img src="https://media.vandal.net/i/1280x720/6-2024/21/202462111372243_1.jpg.webp" alt="Imagen del DLC Elden Ring: Shadow of the Erdtree" loading="lazy" />
       </article>
 
-      <!-- NOTICIA 3 -->
-      <article class="noticia-card">
-        <div class="noticia-contenido">
-          <h2>Rocket League Sideswipe: Cómo descargar gratis en Android e iOS</h2>
-          <span class="fecha-noticia">8 de mayo, 2025</span>
-          <p>Te enseñamos cómo descargar totalmente gratis Rocket League Sideswipe, ¡la versión para móviles en Android e iOS del popular título de fútbol con coches!</p>
-          <img src="https://media.vandal.net/i/1280x720/5-2022/20225411807_1.jpg.webp" alt="Rocket League en móviles">
-        </div>
+      <!-- Noticia 3 -->
+      <article class="noticia-card" tabindex="0">
+        <h2>Rocket League Sideswipe: Cómo descargar gratis en Android e iOS</h2>
+        <time datetime="2025-05-08" class="fecha-noticia">8 de mayo, 2025</time>
+        <p>Te enseñamos cómo descargar gratis Rocket League Sideswipe, ¡la versión para móviles en Android e iOS!</p>
+        <img src="https://media.vandal.net/i/1280x720/5-2022/20225411807_1.jpg.webp" alt="Rocket League en móviles" loading="lazy" />
       </article>
 
-      <!-- NOTICIA 4 -->
-      <article class="noticia-card">
-        <div class="noticia-contenido">
-          <h2>🚨 Se filtra un nuevo tráiler de GTA VI</h2>
-          <span class="fecha-noticia">5 de mayo, 2025</span>
-          <p>Rockstar Games está investigando una nueva filtración que muestra detalles de Vice City en el esperado <strong>GTA VI</strong>. El hype de los fans está por las nubes tras ver nuevas mecánicas y gráficos de próxima generación.</p>
-          <img src="https://cdn.ome.lt/-W4lmv61OIAz19E0rsB1S3f9Upk=/1200x630/smart/extras/conteudos/gta_6.png" alt="GTA VI Trailer filtrado">
-        </div>
+      <!-- Noticia 4 -->
+      <article class="noticia-card" tabindex="0">
+        <h2>Se filtra un nuevo tráiler de GTA VI</h2>
+        <time datetime="2025-05-05" class="fecha-noticia">5 de mayo, 2025</time>
+        <p>Rockstar Games está investigando una nueva filtración que muestra detalles de Vice City en GTA VI.</p>
+        <img src="https://cdn.ome.lt/-W4lmv61OIAz19E0rsB1S3f9Upk=/1200x630/smart/extras/conteudos/gta_6.png" alt="Tráiler filtrado de GTA VI" loading="lazy" />
       </article>
 
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
       <p>&copy; 2025 Web Gaming — Hecho por Eric Abellan</p>
@@ -85,6 +78,8 @@
 
 </body>
 </html>
+
+
 
 
 

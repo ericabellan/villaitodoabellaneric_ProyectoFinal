@@ -1,56 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Quiénes somos en Web Gaming - Conoce al equipo y nuestra misión." />
   <title>Quiénes Somos | Web Gaming</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Barra de navegación -->
-  <header class="navbar">
-    <img src="img/logo.png" alt="Logo pequeño" class="logo-small" />
-    <nav>
-      <ul class="nav-links">
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="eric.html" class="active">Quiénes Somos</a></li>
-        <li><a href="torneos.html">Torneos</a></li>
-      </ul>
-    </nav>
+  <header class="navbar" role="banner">
+    <div class="container">
+      <a href="index.html" aria-label="Inicio Web Gaming">
+        <img src="img/logo.png" alt="Logo Web Gaming" class="logo-small" />
+      </a>
+      <nav role="navigation" aria-label="Menú principal">
+        <ul class="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="eric.html" class="active" aria-current="page">Quiénes Somos</a></li>
+          <li><a href="torneos.html">Torneos</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Contenido principal -->
-  <main>
-    <section class="contenido">
-      <h1>👾 ¿Quiénes somos?</h1>
+  <main class="main-content" role="main">
+    <section class="quienes container" aria-label="Información sobre Web Gaming y su equipo">
+      <h1>👾 Quiénes Somos</h1>
       <p>
-        Bienvenidos a <strong>Web Gaming</strong>, un espacio creado por y para amantes de los videojuegos.
-        Aquí encontrarás los títulos más jugados del último año, así como <strong>videojuegos creados por nosotros mismos</strong> usando plataformas como Scratch.
+        Somos un equipo apasionado por los videojuegos y la comunidad gamer. En Web Gaming, nos esforzamos por ofrecer las últimas noticias, los mejores torneos y un espacio donde los jugadores puedan conectarse y crecer.
       </p>
+      <h2>Eric Abellan - Fundador y Desarrollador</h2>
+      <img src="img/eric.jpg" alt="Foto de Eric Abellan" class="perfil-img" />
       <p>
-        Queremos ir más allá de ser solo un catálogo de juegos. Por eso hemos lanzado <strong>torneos competitivos</strong>
-        donde gamers de todos los niveles pueden poner a prueba sus habilidades y divertirse en comunidad 🎯🔥.
+        Eric es un desarrollador web y gamer dedicado que creó Web Gaming para unir a la comunidad y compartir la pasión por los videojuegos.
       </p>
-    </section>
-
-    <!-- Imagen del creador o equipo -->
-    <section class="perfil-creador">
-      <img src="img/eric.png" alt="Foto de Eric Abellan, creador de la web" class="imagen" />
-      <h2>Eric Abellan</h2>
-      <p>Creador de Web Gaming, apasionado por los videojuegos, el diseño y el desarrollo web.</p>
+      <h2>Nuestra Misión</h2>
+      <p>
+        Crear una plataforma confiable y dinámica que apoye a los jugadores de todos los niveles, facilitando el acceso a información, eventos y competencias.
+      </p>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Web Gaming — Hecho por Eric Abellan</p>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p>Contacto: <a href="mailto:kingame@gmail.com">kingame@gmail.com</a></p>
+      <p>&copy; 2025 Web Gaming — Hecho por Eric Abellan</p>
+    </div>
   </footer>
 
 </body>
 </html>
+
+
 
 

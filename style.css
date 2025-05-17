@@ -28,7 +28,7 @@ a:hover {
   color: #f39c12;
 }
 
-/* NAVBAR */
+/* Barra de navegación */
 .navbar {
   background-color: #1a1a1a;
   padding: 1rem 2rem;
@@ -63,7 +63,7 @@ a:hover {
   color: #0f0f0f;
 }
 
-/* HERO / INICIO */
+/* Hero - Banner de inicio */
 .hero {
   position: relative;
   height: 100vh;
@@ -112,8 +112,7 @@ a:hover {
   }
 }
 
-
-/* SECCIÓN GENERAL */
+/* Sección General */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -126,6 +125,7 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
+/* Botones */
 .btn {
   display: inline-block;
   background-color: #f39c12;
@@ -143,7 +143,8 @@ a:hover {
 .btn:hover {
   background-color: #ffb74d;
 }
-/* CATALOGO */
+
+/* Catálogo */
 .catalogo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -188,8 +189,7 @@ a:hover {
   background-color: #e08e0b;
 }
 
-
-/* NOTICIAS */
+/* Noticias */
 .noticias-section {
   display: grid;
   gap: 2rem;
@@ -220,7 +220,7 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-/* TORNEOS */
+/* Torneos */
 .torneos-section {
   padding: 4rem 2rem;
   max-width: 1000px;
@@ -276,6 +276,8 @@ a:hover {
 .btn:hover {
   background-color: #2563eb;
 }
+
+/* Contacto */
 .contacto {
   background-color: #121212;
   color: #fff;
@@ -349,6 +351,7 @@ a:hover {
     padding: 0 10px;
   }
 }
+
 
 
 
