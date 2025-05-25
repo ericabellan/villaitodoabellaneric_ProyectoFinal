@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-// Esto lo que define es que la imagen del león esté en todas las otras secciones de fondo
+/* Esto lo que define es que la imagen del león esté en todas las otras secciones de fondo */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -63,7 +63,7 @@ a:hover {
   color: #f39c12;
 }
 
-// Esta es la barra de navegación, donde están todas las secciones de la página, como los torneos, el catálogo...
+/* Esta es la barra de navegación, donde están todas las secciones de la página, como los torneos, el catálogo...*/
 .navbar {
   background-color: #1a1a1a;
   padding: 1rem 2rem;
@@ -98,7 +98,7 @@ a:hover {
   color: #0f0f0f;
 }
 
-// Este es el banner del inicio
+/* Este es el banner del inicio*/
 .hero {
   position: relative;
   height: 100vh;
@@ -159,7 +159,7 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-// Estos son los botones para probar los juegos que he hecho en scratch gratis
+/* Estos son los botones para probar los juegos que he hecho en scratch gratis*/
 .btn {
   display: inline-block;
   background-color: #f39c12;
@@ -178,7 +178,7 @@ a:hover {
   background-color: #ffb74d;
 }
 
-// El catálogo de los juegos
+/*El catálogo de los juegos*/
 .catalogo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -264,7 +264,7 @@ a:hover {
   background-color: #e08e0b;
 }
 
-//La parte de las noticias
+/*La parte de las noticias*/
 .noticias-section {
   display: grid;
   gap: 2rem;
@@ -301,7 +301,7 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-//La de los torneos que hay
+/*La de los torneos que hay*/
 .torneos-section {
   padding: 4rem 2rem;
   max-width: 1000px;
@@ -360,7 +360,7 @@ a:hover {
   background-color: #2563eb;
 }
 
-//La parte para contactar con nosotros
+/*La parte para contactar con nosotros*/
 .contacto {
   background-color: #121212;
   color: #fff;
@@ -435,7 +435,7 @@ a:hover {
   }
 }
 
-// El footer
+/*El footer*/
 .footer {
   background-color: #1a1a1a;
   text-align: center;
