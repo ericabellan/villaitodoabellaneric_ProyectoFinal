@@ -6,10 +6,45 @@
 }
 
 body {
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: #0f0f0f;
-  color: #f5f5f5;
+  color: #ffffff;
+  background-image: url('img/banner.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
   line-height: 1.6;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 15, 15, 0.85);
+  z-index: 0;
+}
+
+.main-content, 
+.hero, 
+.noticias-section, 
+#catalogo,
+.quienes,
+.contacto,
+.navbar,
+.footer,
+#torneos,
+.torneos-section {
+  position: relative;
+  z-index: 1;
 }
 
 img {
@@ -154,6 +189,21 @@ a:hover {
   margin: 0 auto;
 }
 
+.catalogo-grid::after {
+  content: '';
+  grid-column: span 1;
+}
+
+.juego-card:last-child {
+  grid-column: 2;
+}
+
+@media (max-width: 992px) {
+  .juego-card:last-child {
+    grid-column: auto;
+  }
+}
+
 .juego-card {
   background-color: #1e1e1e;
   border-radius: 10px;
@@ -161,16 +211,42 @@ a:hover {
   text-align: center;
   color: white;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .juego-card img {
-  max-width: 100%;
+  width: 100%;
+  height: 200px; /* Fixed height for all images */
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
+.juego-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
 .juego-info h3 {
   margin: 0.5rem 0;
+}
+
+.categoria {
+  margin-bottom: 1rem;
+}
+
+.acciones {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.boton.probar {
+  width: 100%;
+  margin: 0;
 }
 
 .btn {
@@ -193,27 +269,33 @@ a:hover {
 .noticias-section {
   display: grid;
   gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.noticia {
+.noticia-card {
   background-color: #1e1e1e;
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-.noticia img {
+.noticia-card img {
   width: 100%;
-  max-height: 300px;
+  height: 300px;
   object-fit: cover;
-  margin-bottom: 1rem;
+  border-radius: 8px;
+  margin: 1rem auto;
+  display: block;
+  max-width: 600px;
 }
 
-.noticia h2 {
+.noticia-card h2 {
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
-.noticia time {
+.fecha-noticia {
   font-size: 0.9rem;
   color: #bbb;
   display: block;
@@ -226,8 +308,9 @@ a:hover {
   max-width: 1000px;
   margin: auto;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
-
 .torneos-intro {
   font-size: 1.1rem;
   margin-bottom: 2rem;
@@ -235,9 +318,8 @@ a:hover {
 }
 
 .torneos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .torneo-card {
@@ -246,6 +328,8 @@ a:hover {
   border-radius: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
+  position: relative;
+  z-index: 2;
 }
 
 .torneo-card:hover {
@@ -352,37 +436,84 @@ a:hover {
   }
 }
 
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
 
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
 
+.footer p {
+  color: #f5f5f5;
+  margin: 5px 0;
+}
 
+.footer a {
+  color: #f39c12;
+  transition: color 0.3s ease;
+}
 
+.footer a:hover {
+  color: #ffb74d;
+}
 
+.perfil-img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin: 1.5rem auto;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 3px solid #f39c12;
+}
 
+.boton.probar {
+    display: inline-block;
+    background-color: #f39c12;
+    color: #0f0f0f;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    margin-top: 1rem;
+}
 
+.boton.probar:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
 
+.boton.probar:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
 
-  
-  
+.alert-success {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
 
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

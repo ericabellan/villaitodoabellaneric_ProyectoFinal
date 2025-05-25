@@ -8,13 +8,21 @@
 </head>
 <body>
 
-  <header class="navbar" role="banner">
+  <!-- Barra de Navegación -->
+  <header class="navbar">
     <div class="logo-container">
-      <a href="inicio.html" aria-label="Inicio Web Gaming">
-        <img src="img/logo.png" alt="Logo Web Gaming" class="logo-small" />
-      </a>
-      <h1 class="titulo">Registro - Web Gaming</h1>
+      <img src="img/logo.png" alt="Logo Web Gaming" class="logo-small">
     </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="eric.html">Quiénes Somos</a></li>
+        <li><a href="torneos.html">Torneos</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="main-content" role="main">
@@ -56,7 +64,7 @@
             <option value="" disabled selected>Elige un juego</option>
             <option value="fortnite">Fortnite</option>
             <option value="rocket-league">Rocket League</option>
-            <option value="cod">Call of Duty</option>
+            <option value="cod">Fall Guys</option>
           </select>
           <small id="juegoHelp" class="form-text">Selecciona el juego para el que quieres participar.</small>
         </div>
@@ -70,8 +78,13 @@
     <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
     <p>&copy; 2025 Web Gaming — Hecho por Eric Abellan</p>
   </footer>
-
+<script>
+  document.querySelector('.formulario-registro').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('¡Jugador registrado con éxito! 🎮');
+    this.reset();
+  });
+</script>
 </body>
 </html>
-
 

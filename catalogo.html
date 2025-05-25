@@ -7,7 +7,22 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Barra de Navegación -->
+  <header class="navbar">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo Web Gaming" class="logo-small">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="catalogo.html" class="active">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="eric.html">Quiénes Somos</a></li>
+        <li><a href="torneos.html">Torneos</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <section id="catalogo">
     <h2 class="section-title">🎮 Catálogo de Juegos</h2>
@@ -18,10 +33,6 @@
     <!-- Botón Jugar Aleatorio -->
     <div class="boton-aleatorio-container">
       <button class="btn" onclick="jugarAleatorio()">🎲 Jugar juego aleatorio</button>
-      <div class="catalogo-nav">
-        <a href="index.html" class="btn-nav">🏠 Inicio</a>
-        <a href="catalogo.html" class="btn-nav">🔙 Menú</a>
-      </div>
     </div>
 
     <script>
@@ -34,7 +45,7 @@
           "https://scratch.mit.edu/projects/1165216842",
           "https://scratch.mit.edu/projects/1166529433",
           "https://scratch.mit.edu/projects/1145401890",
-          "https://scratch.mit.edu/projects/1167748424"
+          "https://scratch.mit.edu/projects/1165072124"
         ];
         const randomIndex = Math.floor(Math.random() * juegosScratch.length);
         const juegoAleatorio = juegosScratch[randomIndex];
@@ -48,7 +59,7 @@
         <img src="img/juego1.png" alt="TARGET RUSH" class="juego-img">
         <div class="juego-info">
           <h3>TARGET RUSH</h3>
-          <span class="categoria">Indie / Aventura</span>
+          <span class="categoria">Oeste / Puntería</span>
           <div class="acciones">
             <a href="https://scratch.mit.edu/projects/1166608471" class="boton probar">Probar gratis</a>
           </div>
@@ -59,7 +70,7 @@
         <img src="img/juego2.png" alt="BEAR SLASH" class="juego-img">
         <div class="juego-info">
           <h3>BEAR SLASH</h3>
-          <span class="categoria">Indie / Aventura</span>
+          <span class="categoria">Oso / Comida</span>
           <div class="acciones">
             <a href="https://scratch.mit.edu/projects/1163674124" class="boton probar">Probar gratis</a>
           </div>
@@ -70,7 +81,7 @@
         <img src="img/juego3.png" alt="CUCA RUN" class="juego-img">
         <div class="juego-info">
           <h3>CUCA RUN</h3>
-          <span class="categoria">Indie / Aventura</span>
+          <span class="categoria">Escapar / Aventura</span>
           <div class="acciones">
             <a href="https://scratch.mit.edu/projects/1163690382" class="boton probar">Probar gratis</a>
           </div>
@@ -81,7 +92,7 @@
         <img src="img/juego5.png" alt="NEON GALAXY" class="juego-img">
         <div class="juego-info">
           <h3>NEON GALAXY</h3>
-          <span class="categoria">Indie / Aventura</span>
+          <span class="categoria">Espacio / Esquivar</span>
           <div class="acciones">
             <a href="https://scratch.mit.edu/projects/1164105595" class="boton probar">Probar gratis</a>
           </div>
@@ -92,7 +103,7 @@
         <img src="img/juego6.png" alt="SIMON DICE" class="juego-img">
         <div class="juego-info">
           <h3>SIMON DICE</h3>
-          <span class="categoria">Indie / Aventura</span>
+          <span class="categoria">Memória / Colores</span>
           <div class="acciones">
             <a href="https://scratch.mit.edu/projects/1165216842" class="boton probar">Probar gratis</a>
           </div>
@@ -103,7 +114,7 @@
         <img src="img/juego7.png" alt="SOUND MAKER" class="juego-img">
         <div class="juego-info">
           <h3>SOUND MAKER</h3>
-          <span class="categoria">Indie / Aventura</span>
+          <span class="categoria">Música / Ritmo</span>
           <div class="acciones">
             <a href="https://scratch.mit.edu/projects/1166529433" class="boton probar">Probar gratis</a>
           </div>
@@ -114,7 +125,7 @@
         <img src="img/juego8.png" alt="DEJA DE CONTAMINAR!" class="juego-img">
         <div class="juego-info">
           <h3>DEJA DE CONTAMINAR!</h3>
-          <span class="categoria">Indie / Aventura</span>
+          <span class="categoria">Reciclar / Aventura</span>
           <div class="acciones">
             <a href="https://scratch.mit.edu/projects/1145401890" class="boton probar">Probar gratis</a>
           </div>
@@ -125,7 +136,7 @@
         <img src="img/juego9.png" alt="PIXEL RUNNER" class="juego-img">
         <div class="juego-info">
           <h3>PIXEL RUNNER</h3>
-          <span class="categoria">Indie / Aventura</span>
+          <span class="categoria">Saltar / Velocidad</span>
           <div class="acciones">
             <a href="https://scratch.mit.edu/projects/1165072124" class="boton probar">Probar gratis</a>
           </div>
